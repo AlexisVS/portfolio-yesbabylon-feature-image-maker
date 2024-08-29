@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture d'écran avec images personnalisées</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="container">
+    <img src="./images/desktop_dell_xps_15.png" class="mockup mockup-pc" alt="PC mockup">
+    <img src="./images/tablet_nexus_9.png" class="mockup mockup-tablet" alt="Tablet mockup">
+    <img src="./images/mobile_huawei_p8.png" class="mockup mockup-mobile" alt="Phone mockup">
+
+    <img src="pc-frame.png" alt="PC" class="device pc" id="pc-frame">
+    <img src="tablet-frame.png" alt="Tablet" class="device tablet" id="tablet-frame">
+    <img src="phone-frame.png" alt="Phone" class="device phone" id="phone-frame">
+    <!-- Zones pour les images téléchargées -->
+    <img id="pc-image" class="device pc" style="display: none;">
+    <img id="tablet-image" class="device tablet" style="display: none;">
+    <img id="phone-image" class="device phone" style="display: none;">
+</div>
+<!-- Inputs pour télécharger des images -->
+
+<div class="modal" id="modal">
+
+    <div class="field">
+        <label>PC</label>
+        <input placeholder="PC" type="file" id="upload-pc" accept="image/*"/>
+    </div>
+
+    <div class="field">
+        <label>Tablet</label>
+        <input placeholder="Tablet" type="file" id="upload-tablet" accept="image/*"/>
+    </div>
+
+    <div class="field">
+        <label>Mobile</label>
+        <input placeholder="Mobile" type="file" id="upload-phone" accept="image/*"/>
+    </div>
+
+    <button id="capture">Prendre une capture d'écran</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script defer src="main.js"></script>
+</body>
+
+</html>

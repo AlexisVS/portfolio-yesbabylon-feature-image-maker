@@ -1,0 +1,104 @@
+#container {
+    position: relative;
+    width: 2560px;
+    /* Ajuster la taille du conteneur selon vos besoins */
+    height: 1440px;
+    margin: 20px auto;
+    background-color: transparent;
+    box-sizing: border-box;
+    /* Assurer que le fond est transparent */
+}
+
+.mockup, .device {
+    position: absolute;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    height: auto;
+}
+
+.mockup-pc {
+    top: 50%;
+    left: 40%;
+    width: 68%;
+}
+
+.mockup-tablet {
+    top: 66%;
+    left: 70%;
+    width: 20%;
+    height: auto;
+    z-index: 2;
+}
+
+.mockup-mobile {
+    top: 80%;
+    left: 80%;
+    width: 10%;
+    z-index: 6;
+}
+
+
+.device {
+    box-sizing: border-box;
+    object-position: top left;
+}
+
+.field {
+    margin: 0 auto;
+    display: flex;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc {
+    top: 46%;
+    left: 39.9%;
+    width: 50.55%;
+}
+
+.tablet {
+    top: 66%;
+    left: 70%;
+    width: 16.25%;
+    z-index: 2;
+}
+
+.phone {
+    top: 79.95%;
+    left: 79.97%;
+    width: 8.5%;
+    z-index: 7;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+}
+
+#screenshot {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 16px;
+    align-items: flex-start;
+    background-color: rgba(204, 204, 204, 0.6);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
