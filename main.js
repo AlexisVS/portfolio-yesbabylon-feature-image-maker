@@ -24,6 +24,25 @@ window.addEventListener('DOMContentLoaded', function () {
         handleFileSelect(event, 'phone-image');
     });
 
+    // Add checkbox tablet reaction
+    document.getElementById('tabletCheckbox').addEventListener('change', function (event) {
+        const checkbox = event.target;
+        const tabletLayer = document.getElementById('tablet-layer');
+        const phoneLayer = document.getElementById('mobile-layer');
+
+        const tabletField = document.getElementById('tablet-field');
+
+        if (checkbox.checked) {
+            tabletLayer.style.display = 'block';
+            phoneLayer.classList.remove('only-mobile');
+            tabletField.style.display = 'flex';
+        } else {
+            tabletLayer.style.display = 'none';
+            phoneLayer.classList.add('only-mobile');
+            tabletField.style.display = 'none';
+        }
+    });
+
     // Fonction pour capturer l'image de l'écran
     document.getElementById('capture').addEventListener('click', () => {
 
