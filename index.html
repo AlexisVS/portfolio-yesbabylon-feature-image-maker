@@ -25,6 +25,10 @@
         <img id="phone-image" class="device phone" style="display: none;">
     </div>
     <!-- Zones pour les images téléchargées -->
+
+    <div id="watermark-layer" class="watermark-layer">
+        <img id="watermark-image" class="watermark-image" src="">
+    </div>
 </div>
 <!-- Inputs pour télécharger des images -->
 
@@ -48,6 +52,19 @@
     <div class="field">
         <label>Mobile</label>
         <input placeholder="Mobile" type="file" id="upload-phone" accept="image/*"/>
+    </div>
+
+    <hr>
+
+    <div class="field">
+        <label>Watermark</label>
+        <input id="watermarkCheckbox" type="checkbox">
+    </div>
+
+
+    <div id="watermark-field" class="field" style="display: none">
+        <label>Watermark</label>
+        <input placeholder="PC" type="file" id="upload-watermark" accept="image/*"/>
     </div>
 
     <button id="capture">Prendre une capture d'écran</button>

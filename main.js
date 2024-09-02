@@ -24,6 +24,10 @@ window.addEventListener('DOMContentLoaded', function () {
         handleFileSelect(event, 'phone-image');
     });
 
+    document.getElementById('upload-watermark').addEventListener('change', function (event) {
+        handleFileSelect(event, 'watermark-image');
+    });
+
     // Add checkbox tablet reaction
     document.getElementById('tabletCheckbox').addEventListener('change', function (event) {
         const checkbox = event.target;
@@ -40,6 +44,21 @@ window.addEventListener('DOMContentLoaded', function () {
             tabletLayer.style.display = 'none';
             phoneLayer.classList.add('only-phone');
             tabletField.style.display = 'none';
+        }
+    });
+
+    // Add checkbox watermark reaction
+    document.getElementById('watermarkCheckbox').addEventListener('change', function (event) {
+        const checkbox = event.target;
+        const watermarkLayer = document.getElementById('watermark-layer');
+        const watermarkField = document.getElementById('watermark-field');
+
+        if (checkbox.checked) {
+            watermarkLayer.style.display = 'flex';
+            watermarkField.style.display = 'flex';
+        } else {
+            watermarkLayer.style.display = 'none';
+            watermarkField.style.display = 'none';
         }
     });
 
