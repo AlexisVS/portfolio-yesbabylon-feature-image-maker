@@ -28,17 +28,17 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('tabletCheckbox').addEventListener('change', function (event) {
         const checkbox = event.target;
         const tabletLayer = document.getElementById('tablet-layer');
-        const phoneLayer = document.getElementById('mobile-layer');
+        const phoneLayer = document.getElementById('phone-layer');
 
         const tabletField = document.getElementById('tablet-field');
 
         if (checkbox.checked) {
             tabletLayer.style.display = 'block';
-            phoneLayer.classList.remove('only-mobile');
+            phoneLayer.classList.remove('only-phone');
             tabletField.style.display = 'flex';
         } else {
             tabletLayer.style.display = 'none';
-            phoneLayer.classList.add('only-mobile');
+            phoneLayer.classList.add('only-phone');
             tabletField.style.display = 'none';
         }
     });
@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let exportedFilename = prompt('Nom du project', 'project');
         exportedFilename = exportedFilename + '_feature_image.png';
 
-        html2canvas(document.getElementById('container'), {useCORS: true, backgroundColor: null}).then(canvas => {
+        html2canvas(document.getElementById('canvas'), {useCORS: true, backgroundColor: null}).then(canvas => {
             const dataURL = canvas.toDataURL('image/png');
 
             // Créer un lien de téléchargement pour l'image

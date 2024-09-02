@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 910px;
+            height: 446px;
+            border: 1px solid aqua;
+        }
+
+        .container img {
+            object-fit: contain;
+            width: calc(100% / 3);
+        }
+
+        .container img:first-child,
+        .container img:last-child {
+            filter: blur(15px);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="events-calendar_mobile_1.png" alt="">
+    <img src="events-calendar_mobile_1.png" alt="">
+    <img src="events-calendar_mobile_1.png" alt="">
+</div>
+</body>
+</html>

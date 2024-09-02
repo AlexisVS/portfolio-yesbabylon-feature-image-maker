@@ -1,4 +1,4 @@
-#container {
+#canvas {
     position: relative;
     width: 2560px;
     /* Ajuster la taille du conteneur selon vos besoins */
@@ -7,6 +7,7 @@
     background-color: transparent;
     box-sizing: border-box;
     /* Assurer que le fond est transparent */
+    border: 1px solid red;
 }
 
 .mockup, .device {
@@ -16,25 +17,79 @@
     height: auto;
 }
 
+/*!** Dev only *!*/
+/*.mockup {*/
+/*    box-sizing: border-box;*/
+/*    border: 1px solid dodgerblue ;*/
+/*}*/
+
+/*!** Dev only *!*/
+/*.layer {*/
+/*    box-sizing: border-box;*/
+/*    border: 1px solid fuchsia;*/
+/*}*/
+
+/*!** Dev only *!*/
+/*.device*/
+/*{*/
+/*    box-sizing: border-box;*/
+/*    border: 2px solid gold;*/
+/*}*/
+
+/*
+ * Mockup PC
+ * Default position
+ */
 .mockup-pc {
-    top: 50%;
-    left: 40%;
-    width: 68%;
+    top: 43%;
+    left: 43%;
+    width: 85%;
 }
 
+/**
+ * Image PC
+ * Default position
+ */
+.pc {
+    top: 38%;
+    left: 42.95%;
+    width: 63%;
+}
+
+/**
+ * Mockup tablet
+ * Default position
+ */
 .mockup-tablet {
-    top: 66%;
-    left: 70%;
-    width: 20%;
+    top: 58%;
+    left: 80%;
+    width: 28%;
     height: auto;
     z-index: 2;
 }
 
-.mockup-mobile {
-    top: 80%;
+/* Image Tablet */
+.tablet {
+    top: 57.95%;
     left: 80%;
-    width: 10%;
+    width: 22.7%;
+    z-index: 2;
+}
+
+/* Mockup Mobile */
+.mockup-phone {
+    top: 74%;
+    left: 93%;
+    width: 13%;
     z-index: 6;
+}
+
+/* Image Mobile */
+.phone {
+    top: 74%;
+    left: 93%;
+    width: 11%;
+    z-index: 7;
 }
 
 
@@ -51,25 +106,6 @@
     align-items: center;
 }
 
-.pc {
-    top: 46%;
-    left: 39.9%;
-    width: 50.55%;
-}
-
-.tablet {
-    top: 66%;
-    left: 70%;
-    width: 16.25%;
-    z-index: 2;
-}
-
-.phone {
-    top: 79.95%;
-    left: 79.97%;
-    width: 8.5%;
-    z-index: 7;
-}
 
 input[type="file"] {
     display: block;
@@ -103,6 +139,22 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.only-mobile {
+.only-phone {
     transform: translate(-12%, 1000px);
 }
+
+/**
+ * Change these classes for position the group of elements mockup + image
+ */
+.pc-layer {
+
+}
+
+.tablet-layer {
+
+}
+
+.phone-layer {
+
+}
+
