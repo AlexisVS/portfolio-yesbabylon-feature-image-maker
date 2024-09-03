@@ -171,7 +171,7 @@ button {
     backdrop-filter: blur(3px);
     border: 1px solid rgba(0, 0, 0, 0.2);
     z-index: 99999999999;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .only-phone {
