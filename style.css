@@ -5,13 +5,11 @@ html {
 #canvas {
     position: relative;
     width: 2560px;
-    /* Ajuster la taille du conteneur selon vos besoins */
     height: 1440px;
     margin: 20px auto;
     background-color: transparent;
     box-sizing: border-box;
-    /* Assurer que le fond est transparent */
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .mockup, .device {
