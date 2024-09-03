@@ -12,11 +12,15 @@ html {
     /*border: 1px solid red;*/
 }
 
-.mockup, .device {
+.mockup, .screenshot {
     position: absolute;
     object-fit: contain;
     transform: translate(-50%, -50%);
     height: auto;
+}
+
+.screenshot {
+    display: none;
 }
 
 /*!** Dev only *!*/
@@ -95,7 +99,7 @@ html {
 }
 
 
-.device {
+.screenshot {
     box-sizing: border-box;
     object-position: top left;
 }
@@ -169,6 +173,7 @@ button {
 }
 
 .only-phone {
+    position: relative; /* Extremely important */
     transform: translate(-8%, 950px);
 }
 
@@ -180,7 +185,6 @@ button {
 }
 
 .tablet-layer {
-
 }
 
 .phone-layer {

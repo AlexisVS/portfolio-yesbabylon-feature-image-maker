@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-
     function handleFileSelect(event, imgId) {
         const file = event.target.files[0];
         if (file) {
@@ -14,26 +13,19 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     // Gestionnaires d'événements pour les inputs de fichiers
-    document.getElementById('upload-pc').addEventListener('change', function (event) {
-        handleFileSelect(event, 'pc-image');
-    });
-    document.getElementById('upload-tablet').addEventListener('change', function (event) {
-        handleFileSelect(event, 'tablet-image');
-    });
-    document.getElementById('upload-phone').addEventListener('change', function (event) {
-        handleFileSelect(event, 'phone-image');
-    });
-
-    document.getElementById('upload-watermark').addEventListener('change', function (event) {
-        handleFileSelect(event, 'watermark-image');
+    const inputs = ['pc', 'tablet', 'phone', 'watermark'];
+    inputs.forEach(input => {
+        document.getElementById('upload-' + input).addEventListener('change', function (event) {
+            handleFileSelect(event, input + '-image');
+        });
     });
 
     // Add checkbox tablet reaction
+    // Default values are checked
     document.getElementById('tabletCheckbox').addEventListener('change', function (event) {
         const checkbox = event.target;
         const tabletLayer = document.getElementById('tablet-layer');
         const phoneLayer = document.getElementById('phone-layer');
-
         const tabletField = document.getElementById('tablet-field');
 
         if (checkbox.checked) {
@@ -42,6 +34,7 @@ window.addEventListener('DOMContentLoaded', function () {
             tabletField.style.display = 'flex';
         } else {
             tabletLayer.style.display = 'none';
+            tabletField.style.display = 'none';
             phoneLayer.classList.add('only-phone');
         }
     });
@@ -64,21 +57,26 @@ window.addEventListener('DOMContentLoaded', function () {
     // Fonction pour capturer l'image de l'écran
     document.getElementById('capture').addEventListener('click', () => {
 
-        document.getElementById('modal').style.display = 'none';
-
+        const modal = document.getElementById('modal');
+        const canvas = document.getElementById('canvas');
         let exportedFilename = prompt('Nom du project', 'project');
-        exportedFilename = exportedFilename + '_feature_image.png';
+        exportedFilename = exportedFilename + '_feature-image.png';
 
-        html2canvas(document.getElementById('canvas'), {useCORS: true, backgroundColor: null}).then(canvas => {
+        modal.style.display = 'none';
+
+        html2canvas(canvas, {useCORS: true, backgroundColor: null}).then(canvas => {
             const dataURL = canvas.toDataURL('image/png');
 
             // Créer un lien de téléchargement pour l'image
             const link = document.createElement('a');
+
             link.href = dataURL;
             link.download = exportedFilename;
             link.click();
         }).catch(err => {
             console.error('Erreur lors de la capture :', err);
         });
+
+        modal.style.display = 'flex';
     });
 });
