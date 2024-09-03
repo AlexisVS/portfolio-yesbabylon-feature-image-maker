@@ -26,7 +26,7 @@
     </div>
     <!-- Zones pour les images téléchargées -->
 
-    <div id="watermark-layer" class="watermark-layer">
+    <div id="watermark-layer" class="watermark-layer" style="display: none">
         <img id="watermark-image" class="watermark-image" src="">
     </div>
 </div>
@@ -36,7 +36,7 @@
 
     <div class="field">
         <label>Avec tablet</label>
-        <input id="tabletCheckbox" type="checkbox" checked>
+        <input id="tabletCheckbox" type="checkbox">
     </div>
 
     <div class="field">
@@ -58,11 +58,11 @@
 
     <div class="field">
         <label>Watermark</label>
-        <input id="watermarkCheckbox" type="checkbox" checked>
+        <input id="watermarkCheckbox" type="checkbox">
     </div>
 
 
-    <div id="watermark-field" class="field">
+    <div id="watermark-field" class="field" style="display:none;">
         <label>Watermark</label>
         <input placeholder="PC" type="file" id="upload-watermark" accept="image/*"/>
     </div>

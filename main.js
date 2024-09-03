@@ -43,7 +43,6 @@ window.addEventListener('DOMContentLoaded', function () {
         } else {
             tabletLayer.style.display = 'none';
             phoneLayer.classList.add('only-phone');
-            tabletField.style.display = 'none';
         }
     });
 
