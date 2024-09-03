@@ -43,10 +43,10 @@ window.addEventListener('DOMContentLoaded', function () {
         if (checkbox.checked) {
             tabletLayer.style.display = 'block';
             phoneLayer.classList.remove('only-phone');
-            tabletField.style.display = 'flex';
+            tabletField.style.visibility = 'visible';
         } else {
             tabletLayer.style.display = 'none';
-            tabletField.style.display = 'none';
+            tabletField.style.visibility = 'hidden';
             phoneLayer.classList.add('only-phone');
         }
     });
@@ -59,10 +59,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
         if (checkbox.checked) {
             watermarkLayer.style.display = 'flex';
-            watermarkField.style.display = 'flex';
+            watermarkField.style.visibility = 'visible';
         } else {
             watermarkLayer.style.display = 'none';
-            watermarkField.style.display = 'none';
+            watermarkField.style.visibility = 'hidden';
         }
     });
 
