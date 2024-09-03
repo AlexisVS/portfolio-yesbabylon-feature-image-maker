@@ -9,7 +9,6 @@ html {
     margin: 20px auto;
     background-color: transparent;
     box-sizing: border-box;
-    /*border: 1px solid red;*/
 }
 
 .mockup, .screenshot {
@@ -23,24 +22,27 @@ html {
     display: none;
 }
 
-/*!** Dev only *!*/
-/*.mockup {*/
-/*    box-sizing: border-box;*/
-/*    border: 1px solid dodgerblue ;*/
-/*}*/
+.dev #canvas {
+    border: 1px solid red;
+}
 
-/*!** Dev only *!*/
-/*.layer {*/
-/*    box-sizing: border-box;*/
-/*    border: 1px solid fuchsia;*/
-/*}*/
+/** Dev only */
+.dev .mockup {
+    box-sizing: border-box;
+    border: 1px solid dodgerblue;
+}
 
-/*!** Dev only *!*/
-/*.device*/
-/*{*/
-/*    box-sizing: border-box;*/
-/*    border: 2px solid gold;*/
-/*}*/
+/** Dev only */
+.dev .layer {
+    box-sizing: border-box;
+    border: 1px solid fuchsia;
+}
+
+/** Dev only */
+.dev .device {
+    box-sizing: border-box;
+    border: 2px solid gold;
+}
 
 /*
  * Mockup PC

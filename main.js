@@ -20,6 +20,18 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Add checkbox developpement border reaction
+    document.getElementById('borderCheckbox').addEventListener('change', function (event) {
+        const checkbox = event.target;
+        const body = document.querySelector('body');
+
+        if (checkbox.checked) {
+            body.classList.add('dev');
+        } else {
+            body.classList.remove('dev');
+        }
+    });
+
     // Add checkbox tablet reaction
     // Default values are checked
     document.getElementById('tabletCheckbox').addEventListener('change', function (event) {
